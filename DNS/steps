@@ -1,0 +1,19 @@
+sudo apt-get install bind9
+
+sudo nano /etc/bind/named.conf.options
+
+sudo service bind9 restart
+
+sudo nano /etc/resolvconf/resolv.conf.d/tail
+
+sudo reboot
+
+{ sudo rndc flush }
+
+sudo nano /etc/bin/named.conf.local
+
+sudo cp /etc/bind/db.local /var/lib/bind/db.lab.loc
+
+sudo cp /etc/bind/db.127 /var/lib/bind/db.192
+
+sudo service bind9 restart

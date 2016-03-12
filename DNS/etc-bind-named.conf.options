@@ -1,0 +1,15 @@
+options {
+        directory "/var/cache/bind";
+
+
+        forwarders {
+                8.8.8.8;
+        };
+        listen-on {
+                127.0.0.1;
+                localhost;
+                192.168.0.10;
+        };
+        auth-nxdomain no;
+        listen-on-v6 { any; };
+};

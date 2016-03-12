@@ -1,0 +1,8 @@
+zone "lab.loc" {
+	type master;
+	file "/var/lib/bind/db.lab.loc";	
+};
+zone "0.168.192.in-addr.arpa" {
+	type master;
+	file "/var/lib/bind/db.192";
+} 

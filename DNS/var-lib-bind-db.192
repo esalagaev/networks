@@ -1,0 +1,16 @@
+;
+; BIND reverse data file  for dns lab.loc
+;
+$TTL	604800
+@	IN	SOA	u1.lab.loc. root.u1.lab.loc. (
+						20141126	;Serial
+						604800		;Refresh
+						86400		;Retry
+						2419200		;Expire
+						604800 )	;Negative Cache TTL
+;
+@	IN	NS	u1.
+1	IN	PTR	gw.lab.loc.
+10	IN	PTR	u1.lab.loc.
+20	IN	PTR	u2.lab.loc.
+30	IN	PTR	u3.lab.loc. 

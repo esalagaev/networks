@@ -1,0 +1,19 @@
+;
+; BIND data file for dns lab.loc
+;
+$TTL    604800
+@       IN      SOA     u1.lab.loc.root.u1.lab.loc. (
+                                20141126        ;Serial
+                                604800          ;Refresh
+                                86400           ;Retry
+                                2419200         ;Expire
+                                604800 )        ;Negative Cache TTL
+;
+@       IN      NS      u1.lab.loc.
+@       IN      A       192.168.0.10
+@       IN      AAAA    ::1
+; далее указывать адресса только для тех узлов, которым выдается статический адресс 
+gw      IN      A       192.168.0.1 ; статический адрес гейтвея
+u1      IN      A       192.168.0.10 
+u2      IN      A       192.168.0.20
+u3      IN      A       192.168.0.30 ; адресс этого DNS сервера в локальной сети
