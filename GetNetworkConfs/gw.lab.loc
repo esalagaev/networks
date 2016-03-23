@@ -18,6 +18,15 @@
 ##
 
 server {
+    listen 192.168.0.1:80;
+    location / { try_files $uri @hello; }
+    location @hello {
+        include uwsgi_params;
+        uwsgi_pass unix:/var/www/demoapp/demoapp_uwsgi.sock;
+    }
+}
+
+server {
 	listen 192.168.0.1:443;
 	server_name gw.lab.loc;
 
